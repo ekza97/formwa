@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <form action="<?=base_url('link/order');?>" method="POST" class="needs-validation"
                                     novalidate="">
                                     <div class="row">
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6">
                                             <label for="fullname">Nama Lengkap</label>
                                             <input type="hidden" name="users_id" value="<?= $this->uri->segment(3);?>">
                                             <input id="fullname" type="text" class="form-control" name="fullname"
@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 Silahkan masukkan nama lengkap dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6">
                                             <label for="contact">Nomor Whatsapp</label>
                                             <input id="contact" type="text" class="form-control" name="contact"
                                                 required>
@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 Silahkan masukkan nomor whatsapp dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6">
                                             <label>Tanggal Lahir</label>
                                             <input type="text" class="form-control datepicker" name="date_birth"
                                                 required>
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 Silahkan masukkan tanggal lahir dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6">
                                             <label for="email">Email</label>
                                             <input id="email" type="email" class="form-control" name="email" required>
                                             <div class="invalid-feedback">
@@ -78,42 +78,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         Alamat Anda
                                     </div>
                                     <div class="row">
-                                        <div class="form-group col-4">
+                                        <div class="form-group col-md-4">
                                             <label>Provinsi</label>
                                             <input type="text" class="form-control" name="province" required>
                                             <div class="invalid-feedback">
                                                 Silahkan masukkan provinsi dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-5">
+                                        <div class="form-group col-md-5">
                                             <label>Kota/Kabupaten</label>
                                             <input type="text" class="form-control" name="district" required>
                                             <div class="invalid-feedback">
                                                 Silahkan masukkan kota/kabupaten dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-3">
+                                        <div class="form-group col-md-3">
                                             <label>Kode Pos</label>
                                             <input type="text" class="form-control" name="postal_code" required>
                                             <div class="invalid-feedback">
                                                 Silahkan masukkan kode pos dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6">
                                             <label>Kecamatan</label>
                                             <input type="text" class="form-control" name="sub_district" required>
                                             <div class="invalid-feedback">
                                                 Silahkan masukkan kecamatan dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-6">
+                                        <div class="form-group col-md-6">
                                             <label>Kelurahan</label>
                                             <input type="text" class="form-control" name="village" required>
                                             <div class="invalid-feedback">
                                                 Silahkan masukkan kelurahan dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-12">
+                                        <div class="form-group col-md-12">
                                             <label>Alamat</label>
                                             <textarea name="address" class="form-control" cols="30" rows="10"
                                                 required></textarea>
