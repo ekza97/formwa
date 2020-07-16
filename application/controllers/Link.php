@@ -32,33 +32,17 @@ class Link extends CI_Controller {
 
     public function order()
     {
-        // $fullname = $this->input->post('fullname', true);
-        // $contact = $this->input->post('contact', true);
-        // $date_birth = $this->input->post('date_birth', true);
-        // $email = $this->input->post('email', true);
-        // $province = $this->input->post('province', true);
-        // $district = $this->input->post('district', true);
-        // $sub_district = $this->input->post('sub_district', true);
-        // $village = $this->input->post('village', true);
-        // $address = $this->input->post('address', true);
-        // $postal_code = $this->input->post('postal_code', true);
-        // $user_id = $this->input->post('user_id', true);
         $data = [
             "fullname"=>$this->input->post('fullname', true),
             "contact"=>$this->input->post('contact', true),
             "date_birth"=>$this->input->post('date_birth', true),
             "email"=>$this->input->post('email', true),
-            "province"=>$this->input->post('province', true),
-            "district"=>$this->input->post('district', true),
-            "sub_district"=>$this->input->post('sub_district', true),
-            "village"=>$this->input->post('village', true),
-            "address"=>$this->input->post('address', true),
-            "postal_code"=>$this->input->post('postal_code', true),
+            "area"=>$this->input->post('area', true),
             "users_id"=>dec_url($this->input->post('users_id', true))
         ];
         $this->order_m->orderProcess($data);
         $wa_admin = substr_replace($this->order_m->getWhatsappAdmin($data['users_id']),"62",0,1);
-        $url = "https://wa.me/".$wa_admin."?text=Assalamualaikum%2C%0A%2ANama%2A%3A%20".$data['fullname']."%0A%2ANo.%20HP%2A%20%3A%20".$data['contact']."%0A%2ATgl%20Lahir%2A%20%3A%20".$data['date_birth']."%0A%2AEmail%2A%20%3A%20".$data['email']."%0A%2AProvinsi%2A%20%3A%20".$data['province']."%0A%2AKota%2FKabupaten%2A%20%3A%20".$data['district']."%0A%2AKecamatan%2A%20%3A%20".$data['sub_district']."%0A%2AKelurahan%2A%20%3A%20".$data['village']."%0A%2AAlamat%2A%20%3A%20".$data['address']."%0A%2AKode%20Pos%2A%20%3A%20".$data['postal_code']."";
+        $url = "https://wa.me/".$wa_admin."?text=Assalamualaikum%2C%0A%2ANama%2A%3A%20".$data['fullname']."%0A%2ANo.%20HP%2A%20%3A%20".$data['contact']."%0A%2ATgl%20Lahir%2A%20%3A%20".$data['date_birth']."%0A%2AEmail%2A%20%3A%20".$data['email']."%0A%2ADaerah%2A%20%3A%20".$data['area']."";
         redirect($url,'location');
     }
 }

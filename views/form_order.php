@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <form action="<?=base_url('link/order');?>" method="POST" class="needs-validation"
                                     novalidate="">
                                     <div class="row">
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-12">
                                             <label for="fullname">Nama Lengkap</label>
                                             <input type="hidden" name="users_id" value="<?= $this->uri->segment(3);?>">
                                             <input id="fullname" type="text" class="form-control" name="fullname"
@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 Silahkan masukkan nama lengkap dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-12">
                                             <label for="contact">Nomor Whatsapp</label>
                                             <input id="contact" type="text" class="form-control" name="contact"
                                                 required>
@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 Silahkan masukkan nomor whatsapp dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-12">
                                             <label>Tanggal Lahir</label>
                                             <input type="text" class="form-control datepicker" name="date_birth"
                                                 required>
@@ -65,71 +65,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 Silahkan masukkan tanggal lahir dengan benar
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-12">
                                             <label for="email">Email</label>
                                             <input id="email" type="email" class="form-control" name="email" required>
                                             <div class="invalid-feedback">
                                                 Silahkan masukkan email dengan benar
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="form-divider">
-                                        Alamat Anda
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group col-md-4">
-                                            <label>Provinsi</label>
-                                            <input type="text" class="form-control" name="province" required>
-                                            <div class="invalid-feedback">
-                                                Silahkan masukkan provinsi dengan benar
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-5">
-                                            <label>Kota/Kabupaten</label>
-                                            <input type="text" class="form-control" name="district" required>
-                                            <div class="invalid-feedback">
-                                                Silahkan masukkan kota/kabupaten dengan benar
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            <label>Kode Pos</label>
-                                            <input type="text" class="form-control" name="postal_code" required>
-                                            <div class="invalid-feedback">
-                                                Silahkan masukkan kode pos dengan benar
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label>Kecamatan</label>
-                                            <input type="text" class="form-control" name="sub_district" required>
-                                            <div class="invalid-feedback">
-                                                Silahkan masukkan kecamatan dengan benar
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label>Kelurahan</label>
-                                            <input type="text" class="form-control" name="village" required>
-                                            <div class="invalid-feedback">
-                                                Silahkan masukkan kelurahan dengan benar
-                                            </div>
-                                        </div>
                                         <div class="form-group col-md-12">
-                                            <label>Alamat</label>
-                                            <textarea name="address" class="form-control" cols="30" rows="10"
+                                            <label>Daerah</label>
+                                            <textarea name="area" class="form-control" cols="30" rows="10"
                                                 required></textarea>
                                             <div class="invalid-feedback">
-                                                Silahkan masukkan alamat dengan benar
+                                                Silahkan masukkan daerah dengan benar
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- <div class="form-group">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" name="agree" class="custom-control-input" id="agree">
-                                            <label class="custom-control-label" for="agree">I agree with the terms and
-                                                conditions</label>
-                                        </div>
-                                    </div> -->
 
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-primary btn-lg btn-block">
@@ -151,8 +102,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- General JS Scripts -->
     <script src="<?= base_url(); ?>assets/modules/jquery.min.js"></script>
+    <script src="<?= base_url(); ?>assets/modules/popper.js"></script>
+    <script src="<?= base_url(); ?>assets/modules/tooltip.js"></script>
     <script src="<?= base_url(); ?>assets/modules/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?= base_url(); ?>assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="<?= base_url(); ?>assets/modules/moment.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/stisla.js"></script>
 
 
